@@ -2,13 +2,14 @@
 
 namespace queue_system.Models
 {
-    public class Counter
+
+    public class Device
     {
         public int id { get; set; }
-        public string counter_name { get; set; } = string.Empty;
+        public string device_name { get; set; } = string.Empty;
+        public string? device_identifier { get; set; } = string.Empty;
         public DateTime created_at { get; set; }
-        // Foreign Key
-        public int? service_type_id { get; set; }
 
     }
+    
 }
