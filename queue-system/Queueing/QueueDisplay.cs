@@ -1,8 +1,8 @@
 namespace queue_system
 {
-    public partial class Queue : Form
+    public partial class QueueDisplay : Form
     {
-        public Queue()
+        public QueueDisplay()
         {
             InitializeComponent();
         }

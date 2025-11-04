@@ -1,6 +1,6 @@
 ﻿namespace queue_system
 {
-    partial class Queue
+    partial class QueueDisplay
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Queue));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QueueDisplay));
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
             label2 = new Label();
@@ -416,13 +416,13 @@
             label21.Text = "Contact Details (Email,Social Media, Website,\r\nPhone Number, Mobile Number)";
             label21.TextAlign = ContentAlignment.TopCenter;
             // 
-            // Queue
+            // QueueDisplay
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1203, 1009);
             Controls.Add(tableLayoutPanel1);
-            Name = "Queue";
+            Name = "QueueDisplay";
             Text = "Queue";
             WindowState = FormWindowState.Maximized;
             Load += Queue_Load;
