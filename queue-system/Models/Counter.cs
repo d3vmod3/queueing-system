@@ -14,6 +14,6 @@ namespace queue_system.Models
         public bool? is_active { get; set; } = true;
         [NotMapped]
         public bool set_counter { get; set; }
-
+        public int? user_id { get; set; } // assigned user
     }
 }

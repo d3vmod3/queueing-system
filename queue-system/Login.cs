@@ -24,7 +24,7 @@ namespace queue_system
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Auth.Login(txtUsername.Text, txtPassword.Text);
+            Auth.Login(txtUsername.Text, txtPassword.Text, this);
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace queue_system
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Auth.Login(txtUsername.Text, txtPassword.Text);
+                Auth.Login(txtUsername.Text, txtPassword.Text, this);
             }
         }
 
@@ -44,7 +44,7 @@ namespace queue_system
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Auth.Login(txtUsername.Text, txtPassword.Text);
+                Auth.Login(txtUsername.Text, txtPassword.Text, this);
             }
         }
     }

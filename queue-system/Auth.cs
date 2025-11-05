@@ -2,34 +2,24 @@
 using queue_system.Helpers;
 using queue_system.Queueing;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace queue_system
 {
-    public class Auth
+    public static class Auth
     {
-        public static string CurrentUser { get; set; } = "";
-        public static int CurrentUserTypeId { get; set; }
-        public static string FirstName { get; set; } = "";
-        public static string LastName { get; set; } = "";
+        // ✅ Session-like properties
+        public static int CurrentUserId { get; private set; }
+        public static string CurrentUsername { get; private set; } = string.Empty;
+        public static int CurrentUserRoleId { get; private set; }
+        public static string CurrentUserRoleName { get; private set; } = string.Empty;
+        public static string FirstName { get; private set; } = string.Empty;
+        public static string LastName { get; private set; } = string.Empty;
         public static string FullName => $"{FirstName} {LastName}".Trim();
 
-        public static void Logout(Form currentForm)
-        {
-            CurrentUser = "";
-            CurrentUserTypeId = 0;
-            currentForm.Close();
-            var loginForm = new Login(); // Replace with your login form
-            loginForm.Show();
-
-
-
-        }
-
-        public static void Login(string txtUsername, string txtPassword)
+        // ✅ Login method
+        public static void Login(string txtUsername, string txtPassword, Form currentForm)
         {
             if (string.IsNullOrWhiteSpace(txtUsername) || string.IsNullOrWhiteSpace(txtPassword))
             {
@@ -39,7 +29,6 @@ namespace queue_system
 
             using (var db = new AppDbContext())
             {
-                // Get user with role in one query
                 var userWithRole = db.Users
                     .Join(db.UserRoles,
                           u => u.user_role_id,
@@ -61,29 +50,40 @@ namespace queue_system
                     return;
                 }
 
-                // ✅ Verify hashed password
-                bool isValid = PasswordHelper.VerifyPassword(txtPassword, user.password);
-
-                if (!isValid)
+                if (!PasswordHelper.VerifyPassword(txtPassword, user.password))
                 {
                     MessageBox.Show("Incorrect password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
+                // ✅ Store session info
+                CurrentUserId = user.id;
+                CurrentUsername = user.username;
+                CurrentUserRoleId = user.user_role_id;
+                CurrentUserRoleName = userWithRole.Role.role_name;
+                FirstName = user.first_name;
+                LastName = user.last_name;
+
                 // ✅ Login success
-                MessageBox.Show($"Welcome, {user.first_name}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Welcome, {FullName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Hide login form
-                //this.Hide();
+                currentForm.Hide();
 
-                // Open form based on role
-                switch (userWithRole.Role.role_name)
+                // ✅ Open dashboard based on role
+                switch (CurrentUserRoleName)
                 {
+                    case "Super Admin":
+                        new Admin.Dashboard().Show();
+                        break;
                     case "Admin":
                         new Admin.Dashboard().Show();
                         break;
-                    case "User":
+                    case "Counter": // optional alias
                         new CounterForm().Show();
+                        break;
+                    case "Kiosk": // optional alias
+                        new GenerateQueueNumber().Show();
                         break;
 
                     default:
@@ -93,7 +93,22 @@ namespace queue_system
             }
         }
 
+        // ✅ Logout
+        public static void Logout(Form currentForm)
+        {
+            // Clear session info
+            CurrentUserId = 0;
+            CurrentUsername = string.Empty;
+            CurrentUserRoleId = 0;
+            CurrentUserRoleName = string.Empty;
+            FirstName = string.Empty;
+            LastName = string.Empty;
+
+            // Close current form and return to login
+            currentForm.Close();
+
+            var loginForm = new Login();
+            loginForm.Show();
+        }
     }
-
-
 }
