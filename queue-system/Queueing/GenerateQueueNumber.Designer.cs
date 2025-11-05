@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            cmbServiceTypes = new ComboBox();
+            cmbPriorities = new ComboBox();
             label2 = new Label();
             btnGenerate = new Button();
             SuspendLayout();
@@ -44,21 +44,21 @@
             label1.TabIndex = 0;
             label1.Text = "Choose Service Type:";
             // 
-            // comboBox1
+            // cmbServiceTypes
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(136, 6);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(212, 23);
-            comboBox1.TabIndex = 1;
+            cmbServiceTypes.FormattingEnabled = true;
+            cmbServiceTypes.Location = new Point(136, 6);
+            cmbServiceTypes.Name = "cmbServiceTypes";
+            cmbServiceTypes.Size = new Size(212, 23);
+            cmbServiceTypes.TabIndex = 1;
             // 
-            // comboBox2
+            // cmbPriorities
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(136, 55);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(212, 23);
-            comboBox2.TabIndex = 3;
+            cmbPriorities.FormattingEnabled = true;
+            cmbPriorities.Location = new Point(136, 55);
+            cmbPriorities.Name = "cmbPriorities";
+            cmbPriorities.Size = new Size(212, 23);
+            cmbPriorities.TabIndex = 3;
             // 
             // label2
             // 
@@ -77,6 +77,7 @@
             btnGenerate.TabIndex = 4;
             btnGenerate.Text = "Generate";
             btnGenerate.UseVisualStyleBackColor = true;
+            btnGenerate.Click += btnGenerate_Click;
             // 
             // GenerateQueueNumber
             // 
@@ -84,12 +85,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(359, 159);
             Controls.Add(btnGenerate);
-            Controls.Add(comboBox2);
+            Controls.Add(cmbPriorities);
             Controls.Add(label2);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbServiceTypes);
             Controls.Add(label1);
             Name = "GenerateQueueNumber";
             Text = "Generate Queue Number";
+            Load += GenerateQueueNumber_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,8 +99,8 @@
         #endregion
 
         private Label label1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cmbServiceTypes;
+        private ComboBox cmbPriorities;
         private Label label2;
         private Button btnGenerate;
     }

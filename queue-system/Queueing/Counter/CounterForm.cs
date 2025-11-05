@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace queue_system.Queueing
 {
-    public partial class Counter : Form
+    public partial class CounterForm : Form
     {
-        public Counter()
+        public CounterForm()
         {
             InitializeComponent();
+        }
+
+        private void CounterForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -4,6 +4,9 @@
     <Compile Update="Admin\Counters\Add.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Admin\Counters\Counters.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Admin\Counters\Delete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -19,7 +22,16 @@
     <Compile Update="Admin\Devices\Delete.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Admin\Devices\Devices.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Admin\Devices\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\ServiceTypes\AssignCounters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\ServiceTypes\ServiceTypes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Admin\Users\Add.cs">
@@ -34,7 +46,10 @@
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Queueing\Counter\Counter.cs">
+    <Compile Update="Queueing\AvailableCounters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Queueing\Counter\CounterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Queueing\Counter\Set Status.cs">
@@ -46,5 +61,10 @@
     <Compile Update="Queueing\QueueDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Queueing\QueueDisplay.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

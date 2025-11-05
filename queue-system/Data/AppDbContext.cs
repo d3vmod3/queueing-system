@@ -52,16 +52,33 @@ namespace queue_system.Data
 
             // --- Counters ---
             modelBuilder.Entity<Counter>().HasData(
-                new Counter { id = 1, counter_name = "Counter 1", service_type_id = 1, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc)},
-                new Counter { id = 2, counter_name = "Counter 2", service_type_id = 1, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc)},
-                new Counter { id = 3, counter_name = "Counter 3", service_type_id = 1, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc)},
-                new Counter { id = 4, counter_name = "Counter 4", service_type_id = 2, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc)},
-                new Counter { id = 5, counter_name = "Counter 5", service_type_id = 3, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc)},
-                new Counter { id = 6, counter_name = "Counter 6", service_type_id = 4, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc)},
-                new Counter { id = 7, counter_name = "Counter 7", service_type_id = 5, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc)},
-                new Counter { id = 8, counter_name = "Counter 8", service_type_id = 6, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc)},
-                new Counter { id = 9, counter_name = "Counter 9", service_type_id = 7, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc)},
-                new Counter { id = 10, counter_name = "Counter 10", service_type_id = 8, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc)}
+                new Counter { id = 1, counter_name = "Counter 1", service_type_id = 1, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 2, counter_name = "Counter 2", service_type_id = 1, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 3, counter_name = "Counter 3", service_type_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 4, counter_name = "Counter 4", service_type_id = 2, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 5, counter_name = "Counter 5", service_type_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 6, counter_name = "Counter 6", service_type_id = 4, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 7, counter_name = "Counter 7", service_type_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 8, counter_name = "Counter 8", service_type_id = 6, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 9, counter_name = "Counter 9", service_type_id = 7, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 10, counter_name = "Counter 10", service_type_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 11, counter_name = "Counter 11", service_type_id = 1, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 12, counter_name = "Counter 12", service_type_id = 2, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 13, counter_name = "Counter 13", service_type_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 14, counter_name = "Counter 14", service_type_id = 4, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 15, counter_name = "Counter 15", service_type_id = 5, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 16, counter_name = "Counter 16", service_type_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 17, counter_name = "Counter 17", service_type_id = 7, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 18, counter_name = "Counter 18", service_type_id = 8, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 19, counter_name = "Counter 19", service_type_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Counter { id = 20, counter_name = "Counter 20", service_type_id = 2, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) }
+            );
+
+
+            modelBuilder.Entity<Device>().HasData(
+                new Device { id = 1, device_name = "Device 1", device_identifier = "A1F3B7C9", created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Device { id = 2, device_name = "Device 2", device_identifier = "B2E4C8D0", created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Device { id = 3, device_name = "Device 3", device_identifier = "C3D5E9F1", created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) }
             );
 
 
@@ -102,45 +119,42 @@ namespace queue_system.Data
             );
 
             modelBuilder.Entity<Slot>().HasData(
-                // Device 1 slots (counters 1–4)
+                // Device 1 — Counters 1–4
                 new Slot { id = 1, device_id = 1, slot_number = 1, counter_id = 1, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 2, device_id = 1, slot_number = 2, counter_id = 1, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 3, device_id = 1, slot_number = 3, counter_id = 2, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 4, device_id = 1, slot_number = 4, counter_id = 2, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 2, device_id = 1, slot_number = 2, counter_id = 2, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 3, device_id = 1, slot_number = 3, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 4, device_id = 1, slot_number = 4, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
                 new Slot { id = 5, device_id = 1, slot_number = 5, counter_id = 3, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 6, device_id = 1, slot_number = 6, counter_id = 3, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 6, device_id = 1, slot_number = 6, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
                 new Slot { id = 7, device_id = 1, slot_number = 7, counter_id = 4, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 8, device_id = 1, slot_number = 8, counter_id = 4, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 8, device_id = 1, slot_number = 8, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
                 new Slot { id = 9, device_id = 1, slot_number = 9, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
                 new Slot { id = 10, device_id = 1, slot_number = 10, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
 
-                // Device 2 slots (counters 5–7)
-                new Slot { id = 11, device_id = 2, slot_number = 1, counter_id = 5, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 12, device_id = 2, slot_number = 2, counter_id = 5, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 13, device_id = 2, slot_number = 3, counter_id = 6, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 14, device_id = 2, slot_number = 4, counter_id = 6, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 15, device_id = 2, slot_number = 5, counter_id = 7, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 16, device_id = 2, slot_number = 6, counter_id = 7, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 17, device_id = 2, slot_number = 7, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                // Device 2 — Counters 5–7
+                new Slot { id = 11, device_id = 2, slot_number = 1, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 12, device_id = 2, slot_number = 2, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 13, device_id = 2, slot_number = 3, counter_id = 5, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 14, device_id = 2, slot_number = 4, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 15, device_id = 2, slot_number = 5, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 16, device_id = 2, slot_number = 6, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 17, device_id = 2, slot_number = 7, counter_id = 6, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
                 new Slot { id = 18, device_id = 2, slot_number = 8, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 19, device_id = 2, slot_number = 9, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 19, device_id = 2, slot_number = 9, counter_id = 7, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
                 new Slot { id = 20, device_id = 2, slot_number = 10, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
 
-                // Device 3 slots (counters 8–10)
-                new Slot { id = 21, device_id = 3, slot_number = 1, counter_id = 8, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 22, device_id = 3, slot_number = 2, counter_id = 8, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 23, device_id = 3, slot_number = 3, counter_id = 9, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 24, device_id = 3, slot_number = 4, counter_id = 9, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 25, device_id = 3, slot_number = 5, counter_id = 10, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 26, device_id = 3, slot_number = 6, counter_id = 10, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                // Device 3 — Counters 8–10
+                new Slot { id = 21, device_id = 3, slot_number = 1, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 22, device_id = 3, slot_number = 2, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 23, device_id = 3, slot_number = 3, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 24, device_id = 3, slot_number = 4, counter_id = 8, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 25, device_id = 3, slot_number = 5, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 26, device_id = 3, slot_number = 6, counter_id = 9, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
                 new Slot { id = 27, device_id = 3, slot_number = 7, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
-                new Slot { id = 28, device_id = 3, slot_number = 8, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
+                new Slot { id = 28, device_id = 3, slot_number = 8, counter_id = 10, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
                 new Slot { id = 29, device_id = 3, slot_number = 9, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) },
                 new Slot { id = 30, device_id = 3, slot_number = 10, counter_id = null, created_at = new DateTime(2025, 11, 3, 8, 0, 0, DateTimeKind.Utc) }
             );
-
-
-
 
         }
     }

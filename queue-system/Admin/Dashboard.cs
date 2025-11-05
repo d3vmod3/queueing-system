@@ -68,12 +68,12 @@ namespace queue_system.Admin
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,6 +102,13 @@ namespace queue_system.Admin
             {
                 childForm.Close();
             }
+        }
+
+        private void devicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Admin.Devices.Devices devicesForm = new Admin.Devices.Devices();
+            devicesForm.ShowDialog();
+
         }
     }
 }

@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QueueDisplay));
             tableLayoutPanel1 = new TableLayoutPanel();
-            label1 = new Label();
+            lblSlot1 = new Label();
+            cmsCounterAction = new ContextMenuStrip(components);
             label2 = new Label();
-            label3 = new Label();
+            lblSlot2 = new Label();
             label4 = new Label();
-            label5 = new Label();
+            lblSlot3 = new Label();
             label6 = new Label();
-            label7 = new Label();
+            lblSlot4 = new Label();
             label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
+            lblSlot5 = new Label();
+            lblSlot6 = new Label();
             label11 = new Label();
-            label12 = new Label();
+            lblSlot7 = new Label();
             label13 = new Label();
-            label14 = new Label();
+            lblSlot8 = new Label();
             label15 = new Label();
-            label16 = new Label();
+            lblSlot9 = new Label();
             label17 = new Label();
-            label18 = new Label();
+            lblSlot10 = new Label();
             label19 = new Label();
             label20 = new Label();
             panel1 = new Panel();
@@ -56,7 +58,9 @@
             panel2 = new Panel();
             axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             label21 = new Label();
+            menuItemClearSlot = new ToolStripMenuItem();
             tableLayoutPanel1.SuspendLayout();
+            cmsCounterAction.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             panel2.SuspendLayout();
@@ -70,24 +74,24 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.Controls.Add(label1, 0, 0);
+            tableLayoutPanel1.Controls.Add(lblSlot1, 0, 0);
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
-            tableLayoutPanel1.Controls.Add(label3, 0, 2);
+            tableLayoutPanel1.Controls.Add(lblSlot2, 0, 2);
             tableLayoutPanel1.Controls.Add(label4, 0, 3);
-            tableLayoutPanel1.Controls.Add(label5, 0, 4);
+            tableLayoutPanel1.Controls.Add(lblSlot3, 0, 4);
             tableLayoutPanel1.Controls.Add(label6, 0, 5);
-            tableLayoutPanel1.Controls.Add(label7, 0, 6);
+            tableLayoutPanel1.Controls.Add(lblSlot4, 0, 6);
             tableLayoutPanel1.Controls.Add(label8, 0, 7);
-            tableLayoutPanel1.Controls.Add(label9, 0, 8);
-            tableLayoutPanel1.Controls.Add(label10, 2, 0);
+            tableLayoutPanel1.Controls.Add(lblSlot5, 0, 8);
+            tableLayoutPanel1.Controls.Add(lblSlot6, 2, 0);
             tableLayoutPanel1.Controls.Add(label11, 2, 1);
-            tableLayoutPanel1.Controls.Add(label12, 2, 2);
+            tableLayoutPanel1.Controls.Add(lblSlot7, 2, 2);
             tableLayoutPanel1.Controls.Add(label13, 2, 3);
-            tableLayoutPanel1.Controls.Add(label14, 2, 4);
+            tableLayoutPanel1.Controls.Add(lblSlot8, 2, 4);
             tableLayoutPanel1.Controls.Add(label15, 2, 5);
-            tableLayoutPanel1.Controls.Add(label16, 2, 6);
+            tableLayoutPanel1.Controls.Add(lblSlot9, 2, 6);
             tableLayoutPanel1.Controls.Add(label17, 2, 7);
-            tableLayoutPanel1.Controls.Add(label18, 2, 8);
+            tableLayoutPanel1.Controls.Add(lblSlot10, 2, 8);
             tableLayoutPanel1.Controls.Add(label19, 0, 9);
             tableLayoutPanel1.Controls.Add(label20, 2, 9);
             tableLayoutPanel1.Controls.Add(panel1, 1, 0);
@@ -111,17 +115,26 @@
             tableLayoutPanel1.Size = new Size(1203, 983);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // lblSlot1
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(49, 6);
-            label1.Name = "label1";
-            label1.Size = new Size(146, 34);
-            label1.TabIndex = 0;
-            label1.Text = "Counter 1";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            lblSlot1.Anchor = AnchorStyles.None;
+            lblSlot1.AutoSize = true;
+            lblSlot1.ContextMenuStrip = cmsCounterAction;
+            lblSlot1.Cursor = Cursors.Hand;
+            lblSlot1.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSlot1.Location = new Point(49, 6);
+            lblSlot1.Name = "lblSlot1";
+            lblSlot1.Size = new Size(146, 34);
+            lblSlot1.TabIndex = 0;
+            lblSlot1.Text = "Counter 1";
+            lblSlot1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // cmsCounterAction
+            // 
+            cmsCounterAction.Items.AddRange(new ToolStripItem[] { menuItemClearSlot });
+            cmsCounterAction.Name = "cmsCounter";
+            cmsCounterAction.Size = new Size(125, 26);
+            cmsCounterAction.Text = "Clear Slot";
             // 
             // label2
             // 
@@ -135,17 +148,19 @@
             label2.Text = "000001";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label3
+            // lblSlot2
             // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(49, 202);
-            label3.Name = "label3";
-            label3.Size = new Size(146, 34);
-            label3.TabIndex = 2;
-            label3.Text = "Counter 2";
-            label3.TextAlign = ContentAlignment.TopCenter;
+            lblSlot2.Anchor = AnchorStyles.None;
+            lblSlot2.AutoSize = true;
+            lblSlot2.ContextMenuStrip = cmsCounterAction;
+            lblSlot2.Cursor = Cursors.Hand;
+            lblSlot2.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSlot2.Location = new Point(49, 202);
+            lblSlot2.Name = "lblSlot2";
+            lblSlot2.Size = new Size(146, 34);
+            lblSlot2.TabIndex = 2;
+            lblSlot2.Text = "Counter 2";
+            lblSlot2.TextAlign = ContentAlignment.TopCenter;
             // 
             // label4
             // 
@@ -159,17 +174,19 @@
             label4.Text = "000001";
             label4.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label5
+            // lblSlot3
             // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(49, 398);
-            label5.Name = "label5";
-            label5.Size = new Size(146, 34);
-            label5.TabIndex = 4;
-            label5.Text = "Counter 3";
-            label5.TextAlign = ContentAlignment.TopCenter;
+            lblSlot3.Anchor = AnchorStyles.None;
+            lblSlot3.AutoSize = true;
+            lblSlot3.ContextMenuStrip = cmsCounterAction;
+            lblSlot3.Cursor = Cursors.Hand;
+            lblSlot3.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSlot3.Location = new Point(49, 398);
+            lblSlot3.Name = "lblSlot3";
+            lblSlot3.Size = new Size(146, 34);
+            lblSlot3.TabIndex = 4;
+            lblSlot3.Text = "Counter 3";
+            lblSlot3.TextAlign = ContentAlignment.TopCenter;
             // 
             // label6
             // 
@@ -183,17 +200,19 @@
             label6.Text = "000001";
             label6.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label7
+            // lblSlot4
             // 
-            label7.Anchor = AnchorStyles.None;
-            label7.AutoSize = true;
-            label7.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(49, 594);
-            label7.Name = "label7";
-            label7.Size = new Size(146, 34);
-            label7.TabIndex = 6;
-            label7.Text = "Counter 4";
-            label7.TextAlign = ContentAlignment.TopCenter;
+            lblSlot4.Anchor = AnchorStyles.None;
+            lblSlot4.AutoSize = true;
+            lblSlot4.ContextMenuStrip = cmsCounterAction;
+            lblSlot4.Cursor = Cursors.Hand;
+            lblSlot4.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSlot4.Location = new Point(49, 594);
+            lblSlot4.Name = "lblSlot4";
+            lblSlot4.Size = new Size(146, 34);
+            lblSlot4.TabIndex = 6;
+            lblSlot4.Text = "Counter 4";
+            lblSlot4.TextAlign = ContentAlignment.TopCenter;
             // 
             // label8
             // 
@@ -207,29 +226,33 @@
             label8.Text = "000001";
             label8.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label9
+            // lblSlot5
             // 
-            label9.Anchor = AnchorStyles.None;
-            label9.AutoSize = true;
-            label9.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(49, 790);
-            label9.Name = "label9";
-            label9.Size = new Size(146, 34);
-            label9.TabIndex = 8;
-            label9.Text = "Counter 5";
-            label9.TextAlign = ContentAlignment.TopCenter;
+            lblSlot5.Anchor = AnchorStyles.None;
+            lblSlot5.AutoSize = true;
+            lblSlot5.ContextMenuStrip = cmsCounterAction;
+            lblSlot5.Cursor = Cursors.Hand;
+            lblSlot5.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSlot5.Location = new Point(49, 790);
+            lblSlot5.Name = "lblSlot5";
+            lblSlot5.Size = new Size(146, 34);
+            lblSlot5.TabIndex = 8;
+            lblSlot5.Text = "Counter 5";
+            lblSlot5.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label10
+            // lblSlot6
             // 
-            label10.Anchor = AnchorStyles.None;
-            label10.AutoSize = true;
-            label10.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(1007, 6);
-            label10.Name = "label10";
-            label10.Size = new Size(146, 34);
-            label10.TabIndex = 9;
-            label10.Text = "Counter 6";
-            label10.TextAlign = ContentAlignment.TopCenter;
+            lblSlot6.Anchor = AnchorStyles.None;
+            lblSlot6.AutoSize = true;
+            lblSlot6.ContextMenuStrip = cmsCounterAction;
+            lblSlot6.Cursor = Cursors.Hand;
+            lblSlot6.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSlot6.Location = new Point(1007, 6);
+            lblSlot6.Name = "lblSlot6";
+            lblSlot6.Size = new Size(146, 34);
+            lblSlot6.TabIndex = 9;
+            lblSlot6.Text = "Counter 6";
+            lblSlot6.TextAlign = ContentAlignment.TopCenter;
             // 
             // label11
             // 
@@ -243,17 +266,19 @@
             label11.Text = "000001";
             label11.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label12
+            // lblSlot7
             // 
-            label12.Anchor = AnchorStyles.None;
-            label12.AutoSize = true;
-            label12.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(1007, 202);
-            label12.Name = "label12";
-            label12.Size = new Size(146, 34);
-            label12.TabIndex = 11;
-            label12.Text = "Counter 7";
-            label12.TextAlign = ContentAlignment.TopCenter;
+            lblSlot7.Anchor = AnchorStyles.None;
+            lblSlot7.AutoSize = true;
+            lblSlot7.ContextMenuStrip = cmsCounterAction;
+            lblSlot7.Cursor = Cursors.Hand;
+            lblSlot7.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSlot7.Location = new Point(1007, 202);
+            lblSlot7.Name = "lblSlot7";
+            lblSlot7.Size = new Size(146, 34);
+            lblSlot7.TabIndex = 11;
+            lblSlot7.Text = "Counter 7";
+            lblSlot7.TextAlign = ContentAlignment.TopCenter;
             // 
             // label13
             // 
@@ -267,17 +292,19 @@
             label13.Text = "000001";
             label13.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label14
+            // lblSlot8
             // 
-            label14.Anchor = AnchorStyles.None;
-            label14.AutoSize = true;
-            label14.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(1007, 398);
-            label14.Name = "label14";
-            label14.Size = new Size(146, 34);
-            label14.TabIndex = 13;
-            label14.Text = "Counter 8";
-            label14.TextAlign = ContentAlignment.TopCenter;
+            lblSlot8.Anchor = AnchorStyles.None;
+            lblSlot8.AutoSize = true;
+            lblSlot8.ContextMenuStrip = cmsCounterAction;
+            lblSlot8.Cursor = Cursors.Hand;
+            lblSlot8.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSlot8.Location = new Point(1007, 398);
+            lblSlot8.Name = "lblSlot8";
+            lblSlot8.Size = new Size(146, 34);
+            lblSlot8.TabIndex = 13;
+            lblSlot8.Text = "Counter 8";
+            lblSlot8.TextAlign = ContentAlignment.TopCenter;
             // 
             // label15
             // 
@@ -291,17 +318,19 @@
             label15.Text = "000001";
             label15.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label16
+            // lblSlot9
             // 
-            label16.Anchor = AnchorStyles.None;
-            label16.AutoSize = true;
-            label16.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(1007, 594);
-            label16.Name = "label16";
-            label16.Size = new Size(146, 34);
-            label16.TabIndex = 15;
-            label16.Text = "Counter 9";
-            label16.TextAlign = ContentAlignment.TopCenter;
+            lblSlot9.Anchor = AnchorStyles.None;
+            lblSlot9.AutoSize = true;
+            lblSlot9.ContextMenuStrip = cmsCounterAction;
+            lblSlot9.Cursor = Cursors.Hand;
+            lblSlot9.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSlot9.Location = new Point(1007, 594);
+            lblSlot9.Name = "lblSlot9";
+            lblSlot9.Size = new Size(146, 34);
+            lblSlot9.TabIndex = 15;
+            lblSlot9.Text = "Counter 9";
+            lblSlot9.TextAlign = ContentAlignment.TopCenter;
             // 
             // label17
             // 
@@ -315,17 +344,19 @@
             label17.Text = "000001";
             label17.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label18
+            // lblSlot10
             // 
-            label18.Anchor = AnchorStyles.None;
-            label18.AutoSize = true;
-            label18.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.Location = new Point(999, 790);
-            label18.Name = "label18";
-            label18.Size = new Size(163, 34);
-            label18.TabIndex = 17;
-            label18.Text = "Counter 10";
-            label18.TextAlign = ContentAlignment.TopCenter;
+            lblSlot10.Anchor = AnchorStyles.None;
+            lblSlot10.AutoSize = true;
+            lblSlot10.ContextMenuStrip = cmsCounterAction;
+            lblSlot10.Cursor = Cursors.Hand;
+            lblSlot10.Font = new Font("Cambria", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSlot10.Location = new Point(999, 790);
+            lblSlot10.Name = "lblSlot10";
+            lblSlot10.Size = new Size(163, 34);
+            lblSlot10.TabIndex = 17;
+            lblSlot10.Text = "Counter 10";
+            lblSlot10.TextAlign = ContentAlignment.TopCenter;
             // 
             // label19
             // 
@@ -416,6 +447,12 @@
             label21.Text = "Contact Details (Email,Social Media, Website,\r\nPhone Number, Mobile Number)";
             label21.TextAlign = ContentAlignment.TopCenter;
             // 
+            // menuItemClearSlot
+            // 
+            menuItemClearSlot.Name = "menuItemClearSlot";
+            menuItemClearSlot.Size = new Size(124, 22);
+            menuItemClearSlot.Text = "Clear Slot";
+            // 
             // QueueDisplay
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -428,6 +465,7 @@
             Load += Queue_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            cmsCounterAction.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
@@ -439,24 +477,24 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Label label1;
+        private Label lblSlot1;
         private Label label2;
-        private Label label3;
+        private Label lblSlot2;
         private Label label4;
-        private Label label5;
+        private Label lblSlot3;
         private Label label6;
-        private Label label7;
+        private Label lblSlot4;
         private Label label8;
-        private Label label9;
-        private Label label10;
+        private Label lblSlot5;
+        private Label lblSlot6;
         private Label label11;
-        private Label label12;
+        private Label lblSlot7;
         private Label label13;
-        private Label label14;
+        private Label lblSlot8;
         private Label label15;
-        private Label label16;
+        private Label lblSlot9;
         private Label label17;
-        private Label label18;
+        private Label lblSlot10;
         private Label label19;
         private Label label20;
         private PictureBox pbLogo;
@@ -465,5 +503,7 @@
         private Panel panel2;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private Label label21;
+        private ContextMenuStrip cmsCounterAction;
+        private ToolStripMenuItem menuItemClearSlot;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace queue_system.Models
 {
@@ -9,6 +10,10 @@ namespace queue_system.Models
         public DateTime created_at { get; set; }
         // Foreign Key
         public int? service_type_id { get; set; }
+
+        public bool? is_active { get; set; } = true;
+        [NotMapped]
+        public bool set_counter { get; set; }
 
     }
 }

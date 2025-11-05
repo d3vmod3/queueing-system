@@ -1,6 +1,6 @@
 ﻿namespace queue_system.Queueing
 {
-    partial class Counter
+    partial class CounterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -124,16 +124,16 @@
             // takeABreakToolStripMenuItem1
             // 
             takeABreakToolStripMenuItem1.Name = "takeABreakToolStripMenuItem1";
-            takeABreakToolStripMenuItem1.Size = new Size(180, 22);
+            takeABreakToolStripMenuItem1.Size = new Size(139, 22);
             takeABreakToolStripMenuItem1.Text = "Take a break";
             // 
             // lToolStripMenuItem
             // 
             lToolStripMenuItem.Name = "lToolStripMenuItem";
-            lToolStripMenuItem.Size = new Size(180, 22);
+            lToolStripMenuItem.Size = new Size(139, 22);
             lToolStripMenuItem.Text = "Logout";
             // 
-            // Counter
+            // CounterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -147,8 +147,9 @@
             Controls.Add(dataGridView1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "Counter";
+            Name = "CounterForm";
             Text = "Counter";
+            Load += CounterForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
