@@ -124,14 +124,15 @@
             // takeABreakToolStripMenuItem1
             // 
             takeABreakToolStripMenuItem1.Name = "takeABreakToolStripMenuItem1";
-            takeABreakToolStripMenuItem1.Size = new Size(139, 22);
+            takeABreakToolStripMenuItem1.Size = new Size(180, 22);
             takeABreakToolStripMenuItem1.Text = "Take a break";
             // 
             // lToolStripMenuItem
             // 
             lToolStripMenuItem.Name = "lToolStripMenuItem";
-            lToolStripMenuItem.Size = new Size(139, 22);
+            lToolStripMenuItem.Size = new Size(180, 22);
             lToolStripMenuItem.Text = "Logout";
+            lToolStripMenuItem.Click += lToolStripMenuItem_Click;
             // 
             // CounterForm
             // 

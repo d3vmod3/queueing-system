@@ -21,5 +21,10 @@ namespace queue_system.Queueing
         {
 
         }
+
+        private void lToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Auth.Logout(this);
+        }
     }
 }
